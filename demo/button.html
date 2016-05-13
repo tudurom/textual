@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>textual.js demo - buttons</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="table"></div>
+        <br />
+        <script src="../src/table.js"></script>
+        <script src="../src/button.js"></script>
+        <script>
+            var el = document.getElementById("table");
+            var table = new Textual.Table(el, 50, 50);
+            var button1 = new Textual.Button(table, "test 1", 0, 0, 10, 10);
+            var button2 = new Textual.Button(table, "test 2", 3, 20, 8, 3);
+
+            button1.attachHandler(function (e) {
+                console.log("hello from button 1 at x " + button1._x + " and y " + button1._y);
+            });
+
+            button2.attachHandler(function (e) {
+                console.log("hello from button 2");
+            });
+        </script>
+    </body>
+</html>
