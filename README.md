@@ -3,4 +3,8 @@ textual
 
 ASCII interface library in JS.
 
-Mostly buttons.
+Features
+--------
+
+* Table based layout
+* Clickable buttons
